@@ -1,16 +1,8 @@
-﻿<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+﻿
 <!DOCTYPE html>
-<html lang="zxx">
-
-
-<!-- Mirrored from p.w3layouts.com/demos_new/template_demo/11-12-2017/explore-demo_Free/1085021436/web/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Feb 2018 10:38:36 GMT -->
+<html>
 <head>
-	<title>Explore a Personal Category Bootstrap Responsive Template | Home :: w3layouts</title>
+	<title>Explore my site!!!</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="Explore Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -23,23 +15,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		function hideURLbar() {
 			window.scrollTo(0, 1);
 		}
+function _(id){ return document.getElementById(id); } 
+function SENDMESSAGE(){ 
+_("mybtn").disabled = true;
+ _("status").innerHTML = 'please wait ...'; 
+var formdata = new FormData(); 
+formdata.append( "n", _("n").value );
+formdata.append( "k", _("n").value );  
+formdata.append( "e", _("e").value );
+formdata.append( "s", _("n").value );  
+formdata.append( "m", _("m").value ); 
+var ajax = new XMLHttpRequest(); 
+ajax.open( "POST", "example_parser.php" );
+ ajax.onreadystatechange = function() { 
+if(ajax.readyState == 4 && ajax.status == 200) { 
+if(ajax.responseText == "success"){ 
+_("my_form").innerHTML = '<h2>Thanks '+_("n").value+', your message has been sent.</h2>'; }
+ else { _("status").innerHTML = ajax.responseText; _("mybtn").disabled = false;
+ } 
+} 
+}
+ ajax.send( formdata );
+ } 
 	</script>
-	<!-- Custom Theme files -->
-	<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-	<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen">
-	<!-- chocolate css for gallery light box -->
-	<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
-	<link href="css/font-awesome.css" rel="stylesheet">
-	<!-- font-awesome icons -->
-	<!--//Custom Theme files-->
-
-	<!-- web-fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:100,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
-	    rel="stylesheet">
-	<!-- //web-fonts -->
+	
 </head>
 <body>
-<!---728x90--->
 	<div class="header-agileinfo">
 		<div class="header-banner text-center">
 			<div class="container">
@@ -70,7 +71,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								web developer
 								<br /> web designer
 								<br /> UI developer
-								<br /> engineer
+								<br /> 
 								<br />
 							</span>
 						</b>
@@ -84,7 +85,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 		<div class="clear"></div>
 		<nav class="navbar navbar-default">
-			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">Menu
 					<span class="sr-only">Toggle navigation</span>
@@ -119,8 +119,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 		</nav>
 	</div>
-	<!-- about -->
-	<!---728x90--->
+	
 	<div class="about section-w3layouts main-pos" id="about">
 		<h3 class="pos-title">about me</h3>
 		<div class="container">
@@ -335,23 +334,26 @@ and I am looking forward to start my career in an organisation.</p>
 		<h4 class="sec-title">nice to meet you!</h4>
 		<div class="contact-right-w3l">
 			<h3 class="title-contact text-center">Have a question or just want to Get in Touch?</h3>
-			<form action="#" method="post">
+			<form id="my_form" onsubmit="SENDMESSAGE(); return false;">
+
+
+
 				<div class="contact-input">
-					<input type="text" class="name" name="name" placeholder="First Name" required="">
+					<input id="n" type="text" class="name" name="name" placeholder="First Name" required="">
 				</div>
 				<div class="contact-input">
-					<input type="text" class="name" name="name" placeholder="Last Name" required="">
+					<input id="k" type="text" class="name" name="name" placeholder="Last Name" required="">
 				</div>
 				<div class="contact-input">
-					<input type="email" class="name" name="name" placeholder="Email" required="">
+					<input id="e" type="email" class="name" name="name" placeholder="Email" required="">
 				</div>
 				<div class="contact-input">
-					<input type="text" class="name" name="name" placeholder="Subject" required="">
+					<input id="s" type="text" class="name" name="name" placeholder="Subject" required="">
 				</div>
 				<div class="contact-input">
-					<textarea placeholder="Your Message" required=""></textarea>
+					<textarea id="m" placeholder="Your Message" required=""></textarea>
 				</div>
-				<input type="submit" value="SEND MESSAGE">
+				<input id="mybtn" type="submit" value="SEND MESSAGE"> <span id="status"></span>
 			</form>
 		</div>
 		<div class="clearfix"></div>
@@ -387,31 +389,7 @@ and I am looking forward to start my career in an organisation.</p>
 		</div>
 	</div>
 
-	<!---728x90--->
-	<!-- modal -->
-
-	<div class="modal about-modal fade" id="myModal" tabindex="-1" role="dialog">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-					<h4 class="modal-title">explore</h4>
-				</div>
-				<div class="modal-body">
-					<div class="model-info">
-						<img src="images/bg2.jpg" alt="" />
-						<p>Duis venenatis, turpis eu bibendum porttitor, sapien quam ultricies tellus, ac rhoncus risus odio eget nunc. Pellentesque
-							ac fermentum diam. Integer eu facilisis nunc, a iaculis felis. Pellentesque pellentesque tempor enim, in dapibus turpis
-							porttitor quis. Suspendisse ultrices hendrerit massa. Nam id metus id tellus ultrices ullamcorper. Cras tempor massa
-							luctus, varius lacus sit amet, blandit lorem. Duis auctor in tortor sed tristique. Proin sed finibus sem.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //modal -->
+	
 
 	<!-- js -->
 	<script src="js/jquery-2.2.3.min.js"></script>
@@ -489,6 +467,4 @@ and I am looking forward to start my career in an organisation.</p>
 	<script src="js/bootstrap.js"></script>
 </body>
 
-
-<!-- Mirrored from p.w3layouts.com/demos_new/template_demo/11-12-2017/explore-demo_Free/1085021436/web/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Feb 2018 10:38:52 GMT -->
 </html>

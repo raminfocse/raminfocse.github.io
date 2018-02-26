@@ -32,6 +32,11 @@
 	<!-- web-fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:100,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
 	    rel="stylesheet">
+	<style type="text/css">
+	body,td,th {
+	font-family: "Barlow Condensed", sans-serif;
+}
+    </style>
 	<!-- //web-fonts -->
 </head>
 <body>
@@ -130,7 +135,7 @@ and I am looking forward to start my career in an organisation.</p>
 						<a href="#contact" class="wthree- about-link scroll">hire me</a>
 					</li>
 					<li>
-						<a href="https://docs.wixstatic.com/ugd/92c2d9_091575b0281a4a3c927b0eec013e0a29.pdf" class="wthree- about-link">download cv</a>
+						<a href="myresume.pdf" class="wthree- about-link">download cv</a>
 					</li>
 				</ul>
 			</div>
@@ -166,10 +171,10 @@ and I am looking forward to start my career in an organisation.</p>
 			<div class="row">
 				<div class="skills-bar">
 					<h3 class="progress-title">HTML5</h3>
-				  <div class="progress  green">
-					<div class="progress-bar" style="width: 90%; background: #5fad56; font-family: 'Barlow Condensed', sans-serif;">
-							<div class="progress-value">90%</div>
-						<span style="text-align: center"></span>						<span style="text-align: center"></span>						<span style="text-align: center"></span>						<span style="text-align: center"></span>						<span style="text-align: center"></span>						<span style="text-align: center"></span>						<span style="text-align: center"></span>						<span style="text-align: right"></span>						<span style="text-align: center"></span>						<span style="text-align: left"></span>						<span style="text-align: left"></span>						<span style="text-align: left"></span>						</div>
+					<div class="progress  green">
+						<div class="progress-bar" style="width:20%; background:#5fad56">
+							<div id="percent" class="progress-value">90%</div>
+						</div>
 					</div>
 					<h3 class="progress-title">PHOTOSHOP</h3>
 					<div class="progress pink">
@@ -195,7 +200,6 @@ and I am looking forward to start my career in an organisation.</p>
 		</div>
 	</div>
 	<!--//skills -->
-
 	<!-- services -->
 	<div class="about section-w3layouts main-pos" id="services">
 		<h3 class="pos-title">web design</h3>
@@ -331,23 +335,23 @@ and I am looking forward to start my career in an organisation.</p>
 		<h4 class="sec-title">nice to meet you!</h4>
 		<div class="contact-right-w3l">
 			<h3 class="title-contact text-center">Have a question or just want to Get in Touch?</h3>
-			<form action="#" method="post">
+			<form action="contactform.php" method="post">
 				<div class="contact-input">
 					<input type="text" class="name" name="name" placeholder="First Name" required="">
 				</div>
 				<div class="contact-input">
-					<input type="text" class="name" name="name" placeholder="Last Name" required="">
+					<input type="text" class="name" name="names" placeholder="Last Name" required="">
 				</div>
 				<div class="contact-input">
-					<input type="email" class="name" name="name" placeholder="Email" required="">
+					<input type="email" class="name" name="mail" placeholder="Email" required="">
 				</div>
 				<div class="contact-input">
-					<input type="text" class="name" name="name" placeholder="Subject" required="">
+					<input type="text" class="name" name="subject" placeholder="Subject" required="">
 				</div>
 				<div class="contact-input">
-					<textarea placeholder="Your Message" required=""></textarea>
+					<textarea name="message" placeholdername="Your Message" required></textarea>
 				</div>
-				<input type="submit" value="SEND MESSAGE">
+				<input type="submit" name="submit" value="SEND MESSAGE">
 			</form>
 		</div>
 		<div class="clearfix"></div>

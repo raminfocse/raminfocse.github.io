@@ -10,37 +10,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="Explore Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
-	<script>
-		addEventListener("load", function () {
-			setTimeout(hideURLbar, 0);
-		}, false);
-
-		function hideURLbar() {
-			window.scrollTo(0, 1);
-		}
-function _(id){ return document.getElementById(id); } 
-function SENDMESSAGE(){ 
-_("mybtn").disabled = true;
- _("status").innerHTML = 'please wait ...'; 
-var formdata = new FormData(); 
-formdata.append( "n", _("n").value );
-formdata.append( "k", _("n").value );  
-formdata.append( "e", _("e").value );
-formdata.append( "s", _("n").value );  
-formdata.append( "m", _("m").value ); 
-var ajax = new XMLHttpRequest(); 
-ajax.open( "POST", "example_parser.php" );
- ajax.onreadystatechange = function() { 
-if(ajax.readyState == 4 && ajax.status == 200) { 
-if(ajax.responseText == "success"){ 
-_("my_form").innerHTML = '<h2>Thanks '+_("n").value+', your message has been sent.</h2>'; }
- else { _("status").innerHTML = ajax.responseText; _("mybtn").disabled = false;
- } 
-} 
-}
- ajax.send( formdata );
- } 
-	</script>
+	
 	<script>
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
@@ -361,31 +331,28 @@ and I am looking forward to start my career in an organisation.</p>
 		<h4 class="sec-title">nice to meet you!</h4>
 		<div class="contact-right-w3l">
 			<h3 class="title-contact text-center">Have a question or just want to Get in Touch?</h3>
-		 <form id="my_form" onsubmit="SENDMESSAGE(); return false;">
-
-
-
+			<form action="#" method="post">
 				<div class="contact-input">
-					<input id="n" type="text" class="name" name="name" placeholder="First Name" required="">
+					<input type="text" class="name" name="name" placeholder="First Name" required="">
 				</div>
 				<div class="contact-input">
-					<input id="k" type="text" class="name" name="name" placeholder="Last Name" required="">
+					<input type="text" class="name" name="name" placeholder="Last Name" required="">
 				</div>
 				<div class="contact-input">
-					<input id="e" type="email" class="name" name="name" placeholder="Email" required="">
+					<input type="email" class="name" name="name" placeholder="Email" required="">
 				</div>
 				<div class="contact-input">
-					<input id="s" type="text" class="name" name="name" placeholder="Subject" required="">
+					<input type="text" class="name" name="name" placeholder="Subject" required="">
 				</div>
 				<div class="contact-input">
-					<textarea id="m" placeholder="Your Message" required></textarea>
+					<textarea placeholder="Your Message" required=""></textarea>
 				</div>
-				<input type="submit" id="mybtn" form="my_form" value="SEND MESSAGE"> <span id="status"></span>
+				<input type="submit" value="SEND MESSAGE">
 			</form>
 		</div>
 		<div class="clearfix"></div>
 	</div>
-	<!-- //contact --> 
+	<!-- //contact -->
 	
 	<div class="footer-main">
 	  <div class="footer-social">
